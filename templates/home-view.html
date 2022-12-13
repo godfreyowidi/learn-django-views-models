@@ -1,0 +1,14 @@
+{% extends "base.html" %} 
+
+{% block content %}
+<h4>{{title}} - {id}: {{id}}</h4>
+<p>{{content}}</p>
+
+<ul>
+  {% for i in object_list %} 
+    {% if i.title %}
+        <li><a href="/articles/{{ i.id }}">{{ i.title }} - {{ i.content }}</a></li>
+    {% endif %} 
+  {% endfor %}
+</ul>
+{% endblock content %}
