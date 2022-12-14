@@ -1,8 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head> </head>
   <body>
-    {% block content %} 
+    <h3>Hello World</h3>
+    <form action="/articles/" method="GET">
+      <input type="text" name="query" />
+      <input type="submit" />
+    </form>
+    {% block content %}
+    <h2>This will definitely be replaced, of course</h2>
     {% endblock content %}
   </body>
 </html>
